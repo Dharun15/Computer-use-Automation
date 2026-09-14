@@ -32,7 +32,7 @@ small local FastAPI app that runs entirely on your machine.
 The only external credential this project uses is an LLM API key, needed
 **only** for the discovery agent (`agent/discover.py`). Nothing else in the
 system (the target app, the replay engine, the capability catalog, the
-stability tool, all 114 automated tests) needs any key at all.
+stability tool, all 109 automated tests) needs any key at all.
 
 Two providers are supported out of the box (`ModelClient` is a swappable
 `Protocol` -- adding a third would touch only `agent/llm_client.py`):
@@ -49,11 +49,41 @@ Two providers are supported out of the box (`ModelClient` is a swappable
   to use -- `gemini-3.5-flash-lite` is the current default as of this
   writing, but check the error if it's stale by the time you run this.
 
+Setting the key depends on your shell:
+
 ```bash
+# macOS/Linux/bash:
 export ANTHROPIC_API_KEY=sk-ant-...
 # or, for the free-tier path:
 export GEMINI_API_KEY=...
 ```
+
+```cmd
+:: Windows cmd.exe (lasts for the current terminal session only):
+set GEMINI_API_KEY=your-key-here
+:: or, to persist across terminal sessions (close and reopen after running this):
+setx GEMINI_API_KEY "your-key-here"
+```
+
+```powershell
+# Windows PowerShell:
+$env:GEMINI_API_KEY = "your-key-here"
+```
+
+Verify it actually took before running the agent:
+
+```cmd
+:: cmd.exe
+echo %GEMINI_API_KEY%
+```
+```powershell
+# PowerShell
+echo $env:GEMINI_API_KEY
+```
+
+**Note on multi-line commands:** the multi-line examples below (using `\`
+line continuations) are bash syntax. In `cmd.exe` use `^` instead, in
+PowerShell use `` ` ``, or simplest: just put the whole command on one line.
 
 ### Running without live services
 
@@ -67,7 +97,7 @@ run:
 pytest tests/ -v
 ```
 
-(114 tests, ~50s, as of this write-up.)
+(109 tests, ~85s, as of this write-up.)
 
 ## 2. Demo path
 
@@ -232,5 +262,5 @@ handoff/        Human-in-the-loop pause/resume + mock console (Phase 9)
 capabilities/   Agent-facing capability catalog + invoke endpoint (stretch)
 evidence/       Discovery + replay run evidence, an example artifact
 scripts/        Reproducible demo-evidence generator + human-intervention demo
-tests/          114 automated tests covering every phase above
+tests/          109 automated tests covering every phase above
 ```
