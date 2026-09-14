@@ -1,0 +1,15 @@
+{
+  "status": "hard_failure",
+  "outcome_code": "PERMISSION_DENIED",
+  "outputs": {},
+  "steps_completed": 4,
+  "total_steps": 5,
+  "failed_step_id": "step_5_extract",
+  "failed_step_action": "extract",
+  "message": "Hard failure: HTTP 403 on 'http://localhost:8000/members/55555' ('MemberServ 3.2 - Access Denied').",
+  "expected": "action to complete with status 'ok'",
+  "observed": "No element matched target (label='Savings Balance'). | page='MemberServ 3.2 - Access Denied'",
+  "recovery_attempts": [],
+  "screenshot_path": "evidence\\_screenshots\\screenshot_20260913-231613_473.png",
+  "intervention": null
+}

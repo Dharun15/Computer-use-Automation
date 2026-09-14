@@ -1,0 +1,15 @@
+{
+  "status": "hard_failure",
+  "outcome_code": "UNKNOWN",
+  "outputs": {},
+  "steps_completed": 0,
+  "total_steps": 5,
+  "failed_step_id": "step_1_navigate",
+  "failed_step_action": "navigate",
+  "message": "navigate(http://localhost:8000/) failed: Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8000/\nCall log:\n  - navigating to \"http://localhost:8000/\", waiting until \"load\"\n",
+  "expected": "action to complete with status 'ok'",
+  "observed": "navigate(http://localhost:8000/) failed: Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8000/\nCall log:\n  - navigating to \"http://localhost:8000/\", waiting until \"load\"\n",
+  "recovery_attempts": [],
+  "screenshot_path": "evidence\\_screenshots\\screenshot_20260914-084121_102.png",
+  "intervention": null
+}

@@ -1,0 +1,11 @@
+Artifact: lookup_member_savings_balance (v1.0)
+Inputs: {"member_id": "77777"}
+Status: success
+Outcome code: None
+Steps: 5/5
+Outputs: {"savings_balance": "$2200.00"}
+Message: Replay completed successfully.
+Expected: None
+Observed: None
+Recovery attempts: 0
+Screenshot: None

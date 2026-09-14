@@ -1,0 +1,91 @@
+{
+  "artifact_version": "1.0",
+  "artifact_id": "lookup_member_savings_balance",
+  "name": "Lookup Member Savings Balance",
+  "description": "",
+  "surface": {
+    "type": "browser",
+    "application": "fake-bank",
+    "version": "1.0"
+  },
+  "inputs": {
+    "member_id": {
+      "type": "string",
+      "required": true,
+      "description": null
+    }
+  },
+  "outputs": {
+    "savings_balance": {
+      "type": "string",
+      "description": null
+    }
+  },
+  "steps": [
+    {
+      "id": "step_1_navigate",
+      "action": "navigate",
+      "url": "/"
+    },
+    {
+      "id": "step_2_type",
+      "action": "type",
+      "target": {
+        "role": null,
+        "name": null,
+        "label": "Member ID:",
+        "text": null,
+        "css": null,
+        "exact": true,
+        "nth": null
+      },
+      "value": "{{member_id}}"
+    },
+    {
+      "id": "step_3_click",
+      "action": "click",
+      "target": {
+        "role": "button",
+        "name": "Search",
+        "label": null,
+        "text": null,
+        "css": null,
+        "exact": true,
+        "nth": null
+      }
+    },
+    {
+      "id": "step_4_click",
+      "action": "click",
+      "target": {
+        "role": "link",
+        "name": "{{member_id}}",
+        "label": null,
+        "text": null,
+        "css": null,
+        "exact": true,
+        "nth": null
+      }
+    },
+    {
+      "id": "step_5_extract",
+      "action": "extract",
+      "target": {
+        "role": null,
+        "name": null,
+        "label": "Savings Balance",
+        "text": null,
+        "css": null,
+        "exact": true,
+        "nth": null
+      },
+      "output": "savings_balance"
+    }
+  ],
+  "checkpoint": {
+    "type": "text_present",
+    "value": "MemberServ 3.2 - Member Details"
+  },
+  "created_at": "2026-09-14T03:15:07.737139+00:00",
+  "source": "discovery"
+}

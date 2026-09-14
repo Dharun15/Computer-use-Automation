@@ -1,0 +1,15 @@
+{
+  "status": "business_outcome",
+  "outcome_code": "MEMBER_NOT_FOUND",
+  "outputs": {},
+  "steps_completed": 3,
+  "total_steps": 5,
+  "failed_step_id": "step_4_click",
+  "failed_step_action": "click",
+  "message": "Reached a known business-outcome page: 'MemberServ 3.2 - No Records'.",
+  "expected": "action to complete with status 'ok'",
+  "observed": "No element matched target (role='link' name='99999'). | page='MemberServ 3.2 - No Records'",
+  "recovery_attempts": [],
+  "screenshot_path": "evidence\\_screenshots\\screenshot_20260913-231601_831.png",
+  "intervention": null
+}

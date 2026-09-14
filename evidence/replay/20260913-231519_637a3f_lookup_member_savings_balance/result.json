@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "outcome_code": null,
+  "outputs": {
+    "savings_balance": "$980.50"
+  },
+  "steps_completed": 5,
+  "total_steps": 5,
+  "failed_step_id": null,
+  "failed_step_action": null,
+  "message": "Replay completed successfully.",
+  "expected": null,
+  "observed": null,
+  "recovery_attempts": [],
+  "screenshot_path": null,
+  "intervention": null
+}

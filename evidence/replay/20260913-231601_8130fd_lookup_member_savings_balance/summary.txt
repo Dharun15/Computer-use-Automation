@@ -1,0 +1,11 @@
+Artifact: lookup_member_savings_balance (v1.0)
+Inputs: {"member_id": "99999"}
+Status: business_outcome
+Outcome code: MEMBER_NOT_FOUND
+Steps: 3/5
+Outputs: {}
+Message: Reached a known business-outcome page: 'MemberServ 3.2 - No Records'.
+Expected: action to complete with status 'ok'
+Observed: No element matched target (role='link' name='99999'). | page='MemberServ 3.2 - No Records'
+Recovery attempts: 0
+Screenshot: evidence\_screenshots\screenshot_20260913-231601_831.png

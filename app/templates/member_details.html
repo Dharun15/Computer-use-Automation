@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head><title>MemberServ 3.2 - Member Details</title>
+<style>
+  body { font-family: "MS Sans Serif", Tahoma, sans-serif; font-size: 13px; background: #d4d0c8; margin: 0; }
+  .titlebar { background: #000080; color: white; padding: 6px 10px; font-weight: bold; }
+  .content { padding: 20px; }
+  table { border-collapse: collapse; background: #ece9d8; border: 2px solid #808080; margin-bottom: 14px; }
+  td, th { padding: 6px 10px; border: 1px solid #a9a9a9; }
+  th { background: #c0c0c0; text-align: left; }
+</style>
+</head>
+<body>
+<div class="titlebar">MemberServ 3.2 :: Member Details</div>
+<div class="content">
+<p>Member Details</p>
+<table>
+  <tr><td>Member ID</td><td>{{ member.member_id }}</td></tr>
+  <tr><td>Name</td><td>{{ member.name }}</td></tr>
+</table>
+
+<div id="accounts-block"{% if member.confirm_dialog %} style="display:none;"{% endif %}>
+<p>Accounts</p>
+<table>
+  <tr><th>Account Type</th><th>Balance</th></tr>
+  <tr><td>Savings Balance</td><td>${{ "%.2f"|format(member.savings_balance) }}</td></tr>
+  <tr><td>Checking Balance</td><td>${{ "%.2f"|format(member.checking_balance) }}</td></tr>
+</table>
+</div>
+
+{% if member.confirm_dialog %}
+<div id="dialog-blocked-msg">
+  <p>Account data is hidden pending confirmation.</p>
+</div>
+<script>
+  window.onload = function () {
+    var ok = window.confirm("This record has restricted-view flags. Continue loading account data?");
+    if (ok) {
+      document.getElementById("accounts-block").style.display = "block";
+      document.getElementById("dialog-blocked-msg").style.display = "none";
+    }
+  };
+</script>
+{% endif %}
+
+<p><a href="/">Return to Search</a></p>
+</div>
+</body>
+</html>

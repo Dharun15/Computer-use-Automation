@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><title>MemberServ 3.2 - Member Search</title>
+<style>
+  body { font-family: "MS Sans Serif", Tahoma, sans-serif; font-size: 13px; background: #d4d0c8; margin: 0; }
+  .titlebar { background: #000080; color: white; padding: 6px 10px; font-weight: bold; }
+  .content { padding: 20px; }
+  table { border-collapse: collapse; background: #ece9d8; border: 2px solid #808080; }
+  td { padding: 6px 10px; }
+  input[type=text] { font-family: inherit; font-size: 13px; padding: 2px; }
+  input[type=submit] { font-family: inherit; font-size: 13px; padding: 3px 14px; }
+</style>
+</head>
+<body>
+<div class="titlebar">MemberServ 3.2 :: Member Search</div>
+<div class="content">
+<table>
+  <tr><td colspan="2">Enter a Member ID to search the servicing database.</td></tr>
+</table>
+<!-- Intentional legacy-hostility: a second, disconnected "Member ID" textbox that is
+     NOT part of the search form (no name attribute, does nothing on submit). This
+     forces both the discovery agent and the replay locator strategy to disambiguate
+     by role+name+enclosing form context rather than grabbing the first visual match. -->
+<table>
+  <tr>
+    <td>Member ID</td>
+    <td><input type="text" size="10" maxlength="5" disabled placeholder="(reference field)"></td>
+  </tr>
+</table>
+<br>
+<form method="post" action="/search">
+<table>
+  <tr>
+    <td>Member ID:</td>
+    <td><input type="text" name="member_id" size="10" maxlength="5"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="right"><input type="submit" value="Search"></td>
+  </tr>
+</table>
+</form>
+</div>
+</body>
+</html>

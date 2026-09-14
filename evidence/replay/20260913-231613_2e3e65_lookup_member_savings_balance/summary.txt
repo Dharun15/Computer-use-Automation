@@ -1,0 +1,11 @@
+Artifact: lookup_member_savings_balance (v1.0)
+Inputs: {"member_id": "55555"}
+Status: hard_failure
+Outcome code: PERMISSION_DENIED
+Steps: 4/5
+Outputs: {}
+Message: Hard failure: HTTP 403 on 'http://localhost:8000/members/55555' ('MemberServ 3.2 - Access Denied').
+Expected: action to complete with status 'ok'
+Observed: No element matched target (label='Savings Balance'). | page='MemberServ 3.2 - Access Denied'
+Recovery attempts: 0
+Screenshot: evidence\_screenshots\screenshot_20260913-231613_473.png

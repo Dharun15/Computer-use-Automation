@@ -1,0 +1,6 @@
+Goal: Look up member 12345 and return their savings balance.
+Status: success
+Steps executed: 8
+Stop reason: model_declared_finish
+Outputs: {"savings_balance": "$4250.00"}
+Final message: Successfully looked up member 12345 and extracted their savings balance.

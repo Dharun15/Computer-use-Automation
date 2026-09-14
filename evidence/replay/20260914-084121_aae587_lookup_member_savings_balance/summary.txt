@@ -1,0 +1,17 @@
+Artifact: lookup_member_savings_balance (v1.0)
+Inputs: {"member_id": "66666"}
+Status: hard_failure
+Outcome code: UNKNOWN
+Steps: 0/5
+Outputs: {}
+Message: navigate(http://localhost:8000/) failed: Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8000/
+Call log:
+  - navigating to "http://localhost:8000/", waiting until "load"
+
+Expected: action to complete with status 'ok'
+Observed: navigate(http://localhost:8000/) failed: Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8000/
+Call log:
+  - navigating to "http://localhost:8000/", waiting until "load"
+
+Recovery attempts: 0
+Screenshot: evidence\_screenshots\screenshot_20260914-084121_102.png

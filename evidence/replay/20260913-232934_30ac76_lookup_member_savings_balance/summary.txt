@@ -1,0 +1,11 @@
+Artifact: lookup_member_savings_balance (v1.0)
+Inputs: {"member_id": "77777"}
+Status: human_intervention
+Outcome code: UNRESOLVED_DIALOG
+Steps: 4/5
+Outputs: {}
+Message: An unrecognized dialog occurred ('This record has restricted-view flags. Continue loading account data?') and was auto-dismissed, but the target action still cannot proceed. A human should decide whether to accept this dialog.
+Expected: action to complete with status 'ok'
+Observed: Target (label='Savings Balance') matched an element that is not visible (hidden on the page). | page='MemberServ 3.2 - Member Details'
+Recovery attempts: 0
+Screenshot: evidence\_screenshots\screenshot_20260913-232934_880.png

@@ -1,0 +1,27 @@
+{
+  "status": "human_intervention",
+  "outcome_code": "UNRESOLVED_DIALOG",
+  "outputs": {},
+  "steps_completed": 4,
+  "total_steps": 5,
+  "failed_step_id": "step_5_extract",
+  "failed_step_action": "extract",
+  "message": "An unrecognized dialog occurred ('This record has restricted-view flags. Continue loading account data?') and was auto-dismissed, but the target action still cannot proceed. A human should decide whether to accept this dialog.",
+  "expected": "action to complete with status 'ok'",
+  "observed": "Target (label='Savings Balance') matched an element that is not visible (hidden on the page). | page='MemberServ 3.2 - Member Details'",
+  "recovery_attempts": [],
+  "screenshot_path": "evidence\\_screenshots\\screenshot_20260913-232934_880.png",
+  "intervention": {
+    "reason": "UNRESOLVED_DIALOG",
+    "message": "An unrecognized dialog occurred ('This record has restricted-view flags. Continue loading account data?') and was auto-dismissed, but the target action still cannot proceed. A human should decide whether to accept this dialog.",
+    "goal": null,
+    "artifact_id": "lookup_member_savings_balance",
+    "step_id": "step_5_extract",
+    "screenshot_path": "evidence\\_screenshots\\screenshot_20260913-232934_880.png",
+    "context": {
+      "url": "http://localhost:8000/members/77777",
+      "title": "MemberServ 3.2 - Member Details"
+    },
+    "created_at": 1789356574.919768
+  }
+}
